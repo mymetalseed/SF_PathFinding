@@ -10,6 +10,16 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+/SF_PathFinding/[Ll]ibrary/
+/SF_PathFinding/[Tt]emp/
+/SF_PathFinding/[Oo]bj/
+/SF_PathFinding/[Bb]uild/
+/SF_PathFinding/[Bb]uilds/
+/SF_PathFinding/[Ll]ogs/
+/SF_PathFinding/[Mm]emoryCaptures/
+/SF_PathFinding/Packages/
+/SF_PathFinding/.vs/
+!/SF_PathFinding/[Aa]ssets/**/*.meta
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
