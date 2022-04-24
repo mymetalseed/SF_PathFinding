@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d21dee7687eb44687d7cc20d3161e8, type: 3}
+  m_Name: rcConfig
+  m_EditorClassIdentifier: 
+  width: 0
+  height: 0
+  tileSize: 0
+  borderSize: 0
+  cs: 0
+  ch: 0
+  bmin:
+  - 0
+  - 0
+  - 0
+  bmax:
+  - 0
+  - 0
+  - 0
+  walkableSlopeAngle: 0
+  walkableHeight: 0
+  walkableClimb: 0
+  walkableRadius: 0
+  maxEdgeLen: 0
+  maxSimplificationError: 0
+  minRegionArea: 0
+  mergeRegionArea: 0
+  maxVertsPerPoly: 0
+  detailSampleDist: 0
+  detailSampleMaxError: 0

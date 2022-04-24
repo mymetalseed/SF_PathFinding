@@ -10,11 +10,11 @@ namespace SF_Recast
     {
         public int width;   //x轴宽度
         public int height;  //z轴高度
-        public float[] bmin = new float[3]; //世界空间下的最小边界
-        public float[] bmax = new float[3]; //世界空间下的最大边界
+        public Vector3 bmin; //世界空间下的最小边界
+        public Vector3 bmax; //世界空间下的最大边界
         public float cs;    //每个元素的大小
         public float ch;    //每个元素的高度
-        public rcSpan?[]? spans = null;
+        public List<rcSpan> spans;
         public rcSpanPool? pools = null;
         public rcSpan? freelist = null;//下一个自由的span
     }

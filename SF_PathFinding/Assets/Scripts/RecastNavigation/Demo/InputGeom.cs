@@ -6,12 +6,15 @@ using UnityEngine;
 
 public class InputGeom
 {
-    rcMeshLoaderObj m_mesh = null;
+    public rcMeshLoaderObj m_mesh = null;
     //BVH树
     rcChunkyTriMesh m_chunkyMesh;
 
     int m_offMeshConCount;
     int m_volumeCount;
+
+    public Vector3 m_meshBMin, m_meshBMax; 
+
     public bool LoadMesh(Mesh mesh)
     {
         if (m_mesh!=null)
@@ -32,8 +35,41 @@ public class InputGeom
         Debug.Log("<color=#"+ greenStr + ">加载Mesh成功!</color>");
 
         //计算边界
+        rcCalcBounds();
         //计算BVH树
 
         return true;
     }
+
+    /// <summary>
+    /// 计算AABB包围盒
+    /// </summary>
+    void rcCalcBounds()
+    {
+        List<Vector3> verts = m_mesh.getVerts();
+        m_meshBMin = verts[0];
+        m_meshBMax = verts[0];
+        foreach(Vector3 v in verts)
+        {
+            m_meshBMin = rcMin(v, m_meshBMin);
+            m_meshBMax = rcMax(v, m_meshBMax);
+        }
+
+    }
+
+    Vector3 rcMin(Vector3 a,Vector3 b)
+    {
+        a.x = Mathf.Min(a.x, b.x);
+        a.y = Mathf.Min(a.y, b.y);
+        a.z = Mathf.Min(a.z, b.z);
+        return a;
+    }
+    Vector3 rcMax(Vector3 a, Vector3 b)
+    {
+        a.x = Mathf.Max(a.x, b.x);
+        a.y = Mathf.Max(a.y, b.y);
+        a.z = Mathf.Max(a.z, b.z);
+        return a;
+    }
+
 }
