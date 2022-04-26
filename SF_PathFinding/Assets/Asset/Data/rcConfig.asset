@@ -12,28 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d21dee7687eb44687d7cc20d3161e8, type: 3}
   m_Name: rcConfig
   m_EditorClassIdentifier: 
-  width: 0
-  height: 0
-  tileSize: 0
-  borderSize: 0
-  cs: 0
-  ch: 0
-  bmin:
-  - 0
-  - 0
-  - 0
-  bmax:
-  - 0
-  - 0
-  - 0
-  walkableSlopeAngle: 0
-  walkableHeight: 0
-  walkableClimb: 0
-  walkableRadius: 0
-  maxEdgeLen: 0
-  maxSimplificationError: 0
-  minRegionArea: 0
-  mergeRegionArea: 0
-  maxVertsPerPoly: 0
-  detailSampleDist: 0
-  detailSampleMaxError: 0
+  m_cellSize: 0.3
+  m_cellHeight: 0.2
+  m_agentHeight: 2
+  m_agentRadius: 0.6
+  m_agentMaxClimb: 0.9
+  m_agentMaxSlope: 45
+  m_regionMinSize: 8
+  m_regionMergeSize: 20
+  m_edgeMaxLen: 12
+  m_edgeMaxError: 1.3
+  m_vertsPerPoly: 6
+  m_detailSampleDist: 6
+  m_detailSampleMaxError: 1
+  m_partitionType: 0
+  m_filterLowHangingObstacles: 1
+  m_filterLedgeSpans: 1
+  m_filterWalkableLowHeightSpans: 1

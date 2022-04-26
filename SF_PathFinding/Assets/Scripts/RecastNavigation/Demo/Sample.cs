@@ -64,7 +64,7 @@ public class Sample_SoloMesh
         RecastHelper.rcCalcGridSize(m_cfg.bmin, m_cfg.bmax, m_cfg.cs, ref m_cfg.width, ref m_cfg.height);
 
         //Step 2. 对输入的多边形进行光栅化
-
+        //heightField的BoundaryBox和cfg一样
         m_solid = new rcHeightField();
         RecastHelper.rcCreateHeightField(m_solid,m_cfg.width,m_cfg.height,m_cfg.bmin,m_cfg.bmax,m_cfg.cs,m_cfg.ch);
 

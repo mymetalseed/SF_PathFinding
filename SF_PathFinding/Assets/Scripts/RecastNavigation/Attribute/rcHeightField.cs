@@ -13,7 +13,8 @@ namespace SF_Recast
         public Vector3 bmin; //世界空间下的最小边界
         public Vector3 bmax; //世界空间下的最大边界
         public float cs;    //每个元素的大小
-        public float ch;    //每个元素的高度
+        //每个元素的高度
+        public float ch;    
         public List<rcSpan> spans;
         public rcSpanPool? pools = null;
         public rcSpan? freelist = null;//下一个自由的span
